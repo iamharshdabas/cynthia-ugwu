@@ -107,8 +107,12 @@ nav {
 
 #hero .footer {
   position: absolute;
-  bottom: var(--gap-500);
+  bottom: var(--padding);
   gap: var(--gap-900);
+}
+
+#products {
+  padding: var(--padding-top) 0px;
 }
 
 .element {
