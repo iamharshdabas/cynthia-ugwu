@@ -48,6 +48,8 @@ nav {
   position: fixed;
   top: 0px;
   padding: 24px var(--padding-width);
+  background-color: #000000;
+  z-index: 1;
 }
 
 #hero {
