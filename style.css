@@ -1,12 +1,12 @@
 :root {
   --padding-top: 128px;
   --padding-left: 210px;
+  --padding-width: max(4vw, 24px);
   --padding: 24px;
 
-  --fs-700: 9rem;
+  --lh-900: 9rem;
   --fs-900: 12rem;
 
-  --width: max(3vw, 1.5rem);
   --gap-500: 4px;
 }
 
@@ -21,6 +21,23 @@
 body {
   background-color: #000000;
   font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: var(--gap-500);
+  font-weight: 500;
+}
+
+.container {
+  padding: 0px var(--padding-width);
 }
 
 a {
@@ -28,33 +45,21 @@ a {
 }
 
 nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--padding) var(--width);
-  text-transform: uppercase;
-}
-
-nav .logo {
-  letter-spacing: var(--gap-500);
-  font-weight: 500;
+  position: fixed;
+  top: 0px;
+  padding: 24px var(--padding-width);
 }
 
 #hero {
+  position: relative;
   height: 100vh;
   padding-top: var(--padding-top);
-}
-
-#heading {
-  padding: var(--padding) var(--width);
-  text-transform: uppercase;
 }
 
 #heading h1 {
   font-weight: 500;
   font-size: var(--fs-900);
-  line-height: var(--fs-700);
+  line-height: var(--lh-900);
   opacity: 0.5;
 }
 
@@ -69,4 +74,15 @@ nav .logo {
 .blocktext h5 {
   padding-top: var(--gap-500);
   text-align: right;
+}
+
+.available {
+  padding-top: var(--padding-top);
+  text-align: right;
+}
+
+#hero .footer {
+  position: absolute;
+  bottom: var(--gap-500);
+  padding: var(--padding) 0px;
 }
