@@ -1,14 +1,17 @@
+/* remove px */
 :root {
-  --padding-top: 210px;
-  --padding-left: 210px;
+  --padding-top: 20vh;
+  --padding-left: 6vw;
   --padding-width: max(4vw, 24px);
-  --padding: 24px;
+  --padding: min(4vw, 1.5rem);
 
-  --fs-700: 8rem;
-  --fs-900: 12rem;
-  --lh-900: 9rem;
+  --fs-500: clamp(0.75rem, 2vw, 1rem);
+  --fs-700: clamp(3rem, 8vw, 8rem);
+  --fs-900: clamp(4rem, 10vw, 12rem);
+  --lh-900: clamp(3rem, 8vw, 10rem);
 
-  --gap-500: 4px;
+  --gap-500: 0.25rem;
+  --gap-900: 1rem;
 }
 
 * {
@@ -58,6 +61,10 @@ h2 {
   opacity: 0.8;
 }
 
+h3 {
+  font-size: var(--fs-500);
+}
+
 h5 {
   opacity: 0.5;
 }
@@ -101,7 +108,7 @@ nav {
 #hero .footer {
   position: absolute;
   bottom: var(--gap-500);
-  padding: var(--padding) 0px;
+  gap: var(--gap-900);
 }
 
 .element {
