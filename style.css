@@ -4,8 +4,9 @@
   --padding-width: max(4vw, 24px);
   --padding: 24px;
 
-  --lh-900: 9rem;
+  --fs-700: 8rem;
   --fs-900: 12rem;
+  --lh-900: 9rem;
 
   --gap-500: 4px;
 }
@@ -14,12 +15,12 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   font: inherit;
 }
 
 body {
-  background-color: #000000;
+  background-color: #000;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
 }
@@ -44,11 +45,28 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: var(--fs-900);
+  line-height: var(--lh-900);
+  opacity: 0.5;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h5 {
+  opacity: 0.5;
+}
+
 nav {
   position: fixed;
   top: 0px;
   padding: 24px var(--padding-width);
-  background-color: #000000;
+  background-color: #000;
   z-index: 1;
 }
 
@@ -56,13 +74,6 @@ nav {
   position: relative;
   height: 100vh;
   padding-top: var(--padding-top);
-}
-
-#heading h1 {
-  font-weight: 500;
-  font-size: var(--fs-900);
-  line-height: var(--lh-900);
-  opacity: 0.5;
 }
 
 .blocktext {
@@ -73,7 +84,7 @@ nav {
   padding-left: var(--padding-left);
 }
 
-.blocktext h5 {
+.blocktext h3 {
   padding-top: var(--gap-500);
   text-align: right;
 }
@@ -87,4 +98,16 @@ nav {
   position: absolute;
   bottom: var(--gap-500);
   padding: var(--padding) 0px;
+}
+
+.element {
+  border-top: 2px solid #888;
+}
+
+.element * {
+  padding: calc(var(--padding) * 1.5) 0px;
+}
+
+.element:nth-child(3) {
+  border-bottom: 2px solid #888;
 }
