@@ -162,7 +162,7 @@ nav {
 }
 
 .socials a {
-  padding: 0px var(--gap-900) var(--gap-500) 0px;
+  padding: 0px var(--gap-900) var(--gap-900) 0px;
 }
 
 @media (max-width: 768px) {
