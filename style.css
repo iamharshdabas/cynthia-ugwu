@@ -44,6 +44,10 @@ body {
   padding: 0px var(--padding-width);
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   display: inline-block;
