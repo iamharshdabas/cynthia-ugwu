@@ -8,6 +8,18 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 })
 
+const followCursor = () => {
+  window.addEventListener('mousemove', (details) => {
+    const x = details.pageX
+    const y = details.pageY
+    const cursor = document.querySelector('#cursor')
+    cursor.style.left = `${x}px`
+    cursor.style.top = `${y}px`
+  })
+}
+
+followCursor()
+
 const time = gsap.timeline()
 
 time
