@@ -2,7 +2,7 @@
 :root {
   --padding-top: 20vh;
   --padding-left: 6vw;
-  --padding-width: max(4vw, 24px);
+  --padding-width: max(4vw, 1.5rem);
   --padding: min(4vw, 1.5rem);
 
   --fs-500: clamp(0.75rem, 2vw, 1rem);
@@ -76,7 +76,7 @@ img {
 nav {
   position: fixed;
   top: 0px;
-  padding: 24px var(--padding-width);
+  padding: var(--padding) var(--padding-width);
   background-color: #000;
   z-index: 1;
 }
@@ -85,30 +85,30 @@ nav {
   position: relative;
   height: 100vh;
   padding-top: var(--padding-top);
-}
 
-.blocktext {
-  width: fit-content;
-}
+  .blocktext {
+    width: fit-content;
 
-.blocktext h1 {
-  padding-left: var(--padding-left);
-}
+    h1 {
+      padding-left: var(--padding-left);
+    }
 
-.blocktext h3 {
-  padding-top: var(--gap-500);
-  text-align: right;
-}
+    h3 {
+      padding-top: var(--gap-500);
+      text-align: right;
+    }
+  }
 
-.available {
-  padding-top: var(--padding-top);
-  text-align: right;
-}
+  .available {
+    padding-top: var(--padding-top);
+    text-align: right;
+  }
 
-#hero .footer {
-  position: absolute;
-  bottom: var(--padding);
-  gap: var(--gap-900);
+  .footer {
+    position: absolute;
+    bottom: var(--padding);
+    gap: var(--gap-900);
+  }
 }
 
 #products {
@@ -118,20 +118,20 @@ nav {
 .element {
   border-top: 2px solid #888;
   position: relative;
-}
 
-.element * {
-  padding: calc(var(--padding) * 1.5) 0px;
-}
+  * {
+    padding: calc(var(--padding) * 1.5) 0px;
+  }
 
-.element:nth-child(3) {
-  border-bottom: 2px solid #888;
-}
+  &:nth-child(3) {
+    border-bottom: 2px solid #888;
+  }
 
-.element img {
-  display: none;
-  z-index: 1;
-  width: 20%;
+  img {
+    display: none;
+    z-index: 1;
+    width: 20%;
+  }
 }
 
 .about {
