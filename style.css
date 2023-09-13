@@ -46,6 +46,7 @@ body {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 h1 {
@@ -137,14 +138,22 @@ nav {
 .about {
   justify-content: center;
   padding-left: max(20vw);
-  gap: var(--padding);
+  gap: calc(var(--padding) * 4);
+
+  img {
+    width: max(12vw, 10rem);
+  }
 
   p {
     max-width: 40rem;
+    text-transform: initial;
+    padding-bottom: var(--padding);
   }
 
-  img {
-    width: max(16vw, 10rem);
+  a {
+    padding: var(--gap-500) var(--gap-900);
+    border-radius: var(--gap-900);
+    border: 1px solid #888;
   }
 }
 
@@ -153,7 +162,6 @@ nav {
 }
 
 .socials a {
-  display: inline-block;
   padding: 0px var(--gap-900) var(--gap-500) 0px;
 }
 
