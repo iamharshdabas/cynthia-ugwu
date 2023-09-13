@@ -133,3 +133,32 @@ nav {
   z-index: 1;
   width: 20%;
 }
+
+.about {
+  justify-content: center;
+  padding-left: max(20vw);
+  gap: var(--padding);
+
+  p {
+    max-width: 40rem;
+  }
+
+  img {
+    width: max(16vw, 10rem);
+  }
+}
+
+.youtube {
+  padding-block: var(--padding-top);
+}
+
+.socials a {
+  padding-right: var(--gap-900);
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding-left: 0rem;
+  }
+}
