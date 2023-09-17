@@ -146,11 +146,14 @@ nav {
   }
 
   img {
+    pointer-events: none;
     position: absolute;
     opacity: 0;
     z-index: 1;
-    width: 20%;
+    width: 30%;
     transform: translate(-50%, -50%);
+    top: 0px;
+    left: 50%;
   }
 }
 

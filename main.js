@@ -35,16 +35,16 @@ const productHover = () => {
     element.addEventListener('mousemove', (details) => {
       const elementBoundry = element.getBoundingClientRect()
       gsap.to(element.querySelector('img'), {
-        opacity: '1',
-        top: `${details.clientY - elementBoundry.top}px`,
-        left: `${details.clientX - elementBoundry.left}px`,
+        opacity: 1,
+        top: details.clientY - elementBoundry.top,
+        left: details.clientX - elementBoundry.left,
         duration: 1,
       })
     })
 
     element.addEventListener('mouseleave', () => {
       gsap.to(element.querySelector('img'), {
-        opacity: '0',
+        opacity: 0,
         duration: 1,
       })
     })
