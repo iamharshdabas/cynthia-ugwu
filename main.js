@@ -28,3 +28,27 @@ time
   .from('.down1', { y: '-100%', duration: 1 })
   .from('.down2', { y: '-100%', duration: 1 })
   .from('.fade', { opacity: 0, duration: 1 })
+
+const productHover = () => {
+  const allElements = document.querySelectorAll('.element')
+  allElements.forEach((element) => {
+    element.addEventListener('mousemove', (details) => {
+      const elementBoundry = element.getBoundingClientRect()
+      gsap.to(element.querySelector('img'), {
+        opacity: '1',
+        top: `${details.clientY - elementBoundry.top}px`,
+        left: `${details.clientX - elementBoundry.left}px`,
+        duration: 1,
+      })
+    })
+
+    element.addEventListener('mouseleave', () => {
+      gsap.to(element.querySelector('img'), {
+        opacity: '0',
+        duration: 1,
+      })
+    })
+  })
+}
+
+productHover()
